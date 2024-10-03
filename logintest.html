@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Login UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Removing responsiveness */
+        @media (max-width: 1024px) {
+            body {
+                transform: scale(1.0);
+                width: 1024px;
+                overflow: auto;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Main container (Fixed width) -->
+    <div class="flex items-center justify-center min-h-screen">
+        <div class="w-96 space-y-8"> <!-- Fixed width of 24rem (96 units) -->
+            <!-- Logo -->
+            <div class="text-center">
+                <h1 class="text-4xl font-bold text-gray-800">Welcome Back!</h1>
+                <p class="mt-2 text-sm text-gray-600">Login to your account</p>
+            </div>
+
+            <!-- Form -->
+            <form class="bg-white shadow-lg rounded-lg px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+                        Email Address
+                    </label>
+                    <input 
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        id="email" type="email" placeholder="Your email">
+                    <p class="text-red-500 text-xs italic mt-2">Please enter a valid email address.</p>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                        Password
+                    </label>
+                    <input 
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
+                        id="password" type="password" placeholder="********">
+                    <p class="text-red-500 text-xs italic">Please enter your password.</p>
+                </div>
+
+                <div class="flex items-center justify-between">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="button">
+                        Sign In
+                    </button>
+                    <a class="inline-block align-baseline font-bold text-sm text-indigo-500 hover:text-indigo-800" href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+            </form>
+
+            <!-- Divider -->
+            <div class="flex items-center justify-center my-4">
+                <div class="border-t border-gray-300 w-full"></div>
+                <span class="mx-4 text-gray-500">or</span>
+                <div class="border-t border-gray-300 w-full"></div>
+            </div>
+
+            <!-- Social Login Buttons -->
+            <div class="space-y-4">
+                <button class="flex items-center justify-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                    <img src="https://img.icons8.com/color/24/google-logo.png" alt="Google Logo" class="mr-2">
+                    Sign in with Google
+                </button>
+
+                <button class="flex items-center justify-center w-full py-2 px-4 border border-gray-300 rounded-lg shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50">
+                    <img src="https://img.icons8.com/color/24/facebook-new.png" alt="Facebook Logo" class="mr-2">
+                    Sign in with Facebook
+                </button>
+            </div>
+
+            <!-- Create Account Link -->
+            <div class="text-center mt-4">
+                <p class="text-gray-600 text-sm">Don't have an account? 
+                    <a href="#" class="text-indigo-500 font-bold hover:text-indigo-800">Sign up here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
